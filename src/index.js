@@ -12,9 +12,6 @@ async function startApolloServer(typeDefs, resolvers) {
         trackAPI: new TrackAPI(),
       };
     },
-    cors: {
-      origin: ["https://apollo-cat-client.herokuapp.com/"]
-    }
   });
 
   const { url, port } = await server.listen({port: process.env.PORT || 4000});
